@@ -1,7 +1,7 @@
 default: build
 
 build:
-	docker build -t mapitman/password-store .
+	docker build --build-arg VCS_REF=`git rev-parse --short HEAD` --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` -t mapitman/password-store .
 
 run:
 	docker run -it --rm \
