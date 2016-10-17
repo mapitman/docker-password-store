@@ -1,4 +1,5 @@
 # docker-password-store
+[![](https://images.microbadger.com/badges/image/mapitman/password-store.svg)](https://microbadger.com/images/mapitman/password-store "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/mapitman/password-store.svg)](https://microbadger.com/images/mapitman/password-store "Get your own version badge on microbadger.com")
 
 Run [Password Store](https://www.passwordstore.org/) in a Docker container.
 Great if you use Windows in addition to Linux or macOS and want to get access to
