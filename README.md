@@ -15,6 +15,8 @@ Run the container and map your `.gnupg` and `.password-store` directories into t
 ```sh
 docker run -it --rm \
 -v $HOME/.password-store:/root/.password-store \
--v $HOME/.gnupg:/root/.gnupg \
+-v $HOME/.gnupg:/root/gnupg:ro \
  mapitman/password-store /bin/bash
 ```
+
+Since [Docker for Windows](https://docs.docker.com/docker-for-windows/) doesn't support creating special files like sockets on mapped volumes, the .bashrc has some script to copy the contents of `/root/gnupg` to `/root/.gnupg` so the `gpg-agent` will run properly.
