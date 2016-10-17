@@ -10,3 +10,6 @@ run:
 	 mapitman/password-store /bin/bash
 run-test:
 	docker run -it mapitman/password-store /bin/bash
+
+push:
+	docker push mapitman/password-store
